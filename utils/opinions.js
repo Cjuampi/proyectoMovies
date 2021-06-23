@@ -4,8 +4,7 @@ let scrapping = {
 
 
 scrap: async (filmTitle) => {
-
-  console.log(filmTitle)
+  /* console.log(filmTitle) */
 
   const browser = await puppeteer.launch({
     headless: true, 

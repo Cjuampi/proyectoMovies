@@ -7,10 +7,10 @@ scrap: async (filmTitle) => {
 
   console.log(filmTitle)
 
-  const browser = await puppeteer.launch({args: [
-    '--no-sandbox',
-    '--disable-setuid-sandbox',
-  ] });
+  const browser = await puppeteer.launch({
+    headless: true, 
+    args: ['--no-sandbox']
+  });
   const page = await browser.newPage();
   await page.goto( `https://www.sensacine.com/buscar/?q=${filmTitle}`);
   await page.click('button[id="didomi-notice-agree-button"]');

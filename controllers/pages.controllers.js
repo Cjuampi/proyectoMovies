@@ -90,7 +90,7 @@ const pages = {
               res.status(403).render('message',{ type: "Error: ", message: "No se puede crear el usuario, inténtelo más tarde.", link: '/', flag: true }) 
           } 
         }catch(error){
-          res.status(500).render('message',{ type: "Error: ", message: "El usuario no fue creado :(", link: '/', flag: true }) 
+          res.status(500).render('message',{ type: "Error: ", message: "El usuario no fue creado", link: '/', flag: true })
         }
       }else{
         if(data.hasOwnProperty('numError')){

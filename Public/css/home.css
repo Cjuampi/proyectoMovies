@@ -85,3 +85,6 @@ body {
     color: white;
     font-weight: bold;
   }
+  input:focus::placeholder {
+    color: transparent;
+  }

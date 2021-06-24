@@ -227,7 +227,7 @@ const user = {
       if (data[0].contador > 0) {
         res.status(200).render("message", {
           type: "Error: ",
-          message: `Esta pelicula ya existe en la base de datos`,
+          message: `Esta pelicula ya está en mis películas`,
           link: `/search`,
           flag: true,
         });
@@ -236,7 +236,7 @@ const user = {
 
         res.status(200).render("message", {
           type: "Info: ",
-          message: `Se agregó la pelicula a la base de datos`,
+          message: `Se agregó a mis películas`,
           link: `/search`,
           flag: true,
         });

@@ -13,7 +13,12 @@ html(lang="en")
         .box
             .box-cont
                 span Mensaje:
-                p#resultado #{type} #{message}
+                if type == "Error: "
+                    img#emoji(src='/Public/img/fail.png')
+                    p#resultado #{type} #{message}
+                else
+                    img#emoji(src='/Public/img/win.png')
+                    p#resultado #{type} #{message}
                 br
                 a#oka(href=link) Aceptar
     else 

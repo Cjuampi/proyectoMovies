@@ -1,11 +1,14 @@
 require("dotenv").config();
 require('./database/mongo.cnx')
 const express = require("express");
+var cors = require('cors')
 const app = express();
 const router = require("./routes/routes")
 const PORT = process.env.PORT || 3000;
 const passport = require("./middlewares/passport");
 const cookieParser = require('cookie-parser');
+
+app.use(cors())
 
 app.set("view engine", "pug");
 app.set("views", "./views");

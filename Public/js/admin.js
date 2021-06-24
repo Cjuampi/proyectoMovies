@@ -1,6 +1,6 @@
 function remove(title) {
   let deleteMethod = async (title) => {
-    let response = await fetch(`http://localhost:3000/deleteFilm/${title}`, {
+    let response = await fetch(`https://app-movie-nhj.herokuapp.com/deleteFilm/${title}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

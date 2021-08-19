@@ -8,7 +8,6 @@ let middlewares = {
         const reqToken = cookieParser.JSONCookies(req.headers.cookie)
         const token = reqToken.split('=')[1]
         const payload = jwt.decode(token, process.env.SECRET)
-        /* console.log(payload) */
         let timeStamp = Date.now().toString().substr(0,10)
         if(payload.exp < timeStamp){
             return res.status(403).render('message',{type:'Error:', message:'Token expirado',link:'/',flag: true})

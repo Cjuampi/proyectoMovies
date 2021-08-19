@@ -12,7 +12,6 @@ function remove(title) {
   };
 
   deleteMethod(title)
-    /*     .then( resp => resp.json()) */
     .then((resp) => {
       window.location = resp.url;
     })

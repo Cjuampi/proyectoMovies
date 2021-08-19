@@ -10,7 +10,6 @@ const user = {
     res.status(200).render("dashboard");
   },
   getMovies: async (req, res) => {
-    console.log('getMovie req user: ', req.user)
     let tituloDePelicula = req.params.title;
     let data = await pelis.getMovie(
       `http://www.omdbapi.com/?t=${tituloDePelicula}&apikey=${apiKey}`
@@ -18,15 +17,12 @@ const user = {
     res.status(200).render("film", data);
   },
   postSearch: async (req, res) => {
-    console.log("************req",req.user)
     let movie = req.body.peliculaBuscar;
     let arrayVacio = [];
 
     let result = await Movies.findOne({ Title: movie }).exec();
 
     if (result == null) {
-      console.log("NO EXISTE");
-
       let data = await pelis.getMovie(
         `http://www.omdbapi.com/?s=${movie}&apikey=${apiKey}`
       );
@@ -37,14 +33,10 @@ const user = {
           `http://www.omdbapi.com/?i=${idDePelis}&apikey=${apiKey}`
         );
         let array = await arrayVacio.push(data2);
-
-        /* console.log(data2) */
       }
-     /*  console.log(arrayVacio); */
+
       res.status(200).render("search", { arrayVacio });
     } else {
-      console.log("EXISTE EN LOCAL");
-
       let objetoDePrueba = {
         Title: result.Title,
         Year: result.Year,
@@ -64,33 +56,17 @@ const user = {
     }
   },
   getSearch: (req, res) => {
-    console.log('getSearch req: ',req.user)
     res.status(200).render("search");
   },
   getSearchTitle: async (req, res) => {
-    console.log('getSearchTitle req: ',req.user)
     let filmTitle = req.params.title;
 
-    let result = await Movies.findOne({ Title: filmTitle }).exec();
-    console.log("***************");
-    console.log(result);
-    console.log("***************");
-
-    
-
+    let result = await Movies.findOne({ Title: filmTitle }).exec();   
     if (result === null) {
       let cleanTitle = await filmTitle
         .normalize("NFD")
         .replace(/([aeio])\u0301|(u)[\u0301\u0308]/gi, "$1$2")
         .normalize();
-
-       
-       /*   let opinions =  await scraping.scrap(cleanTitle)  
-
-
-        console.log(opinions) */
-         
-
       let data = await pelis.getMovie(
         `http://www.omdbapi.com/?t=${cleanTitle}&apikey=${apiKey}`
       );
@@ -98,16 +74,8 @@ const user = {
       let data2 = await pelis.getMovie(
         `http://www.omdbapi.com/?i=${peliculaname}&apikey=${apiKey}`
       );
-
-     
-   
       let data4 = await scraping.scrap(data2.Title)
-
-      console.log(data4.arrayVacio)  
-
       let opiniones = data4.arrayVacio  
-     /*  opiniones= "pruebaaaaaaaaaaaaaa" */
-
       res.status(200).render("searchAllDetails", {data2,opiniones});
     } else {
       let data2 = {
@@ -123,21 +91,12 @@ const user = {
         imdbID: result.IdMovie,
       };
 
-     let data4 = await scraping.scrap(data2.Title)
-
-     
-      console.log(data4.arrayVacio)  
-
+      let data4 = await scraping.scrap(data2.Title)
       let opiniones = data4.arrayVacio 
-
-    /*   opiniones= "pruebaaaaaaaaaaaaaa" */
-
-
       res.status(200).render("searchAllDetails", {data2,opiniones});
     }
   },
   getFavUserMovies: async (req, res) => {
-    console.log('getFavUserMovies: ',req.user)
     let arrayVacio = [];
     let email = req.user;
 
@@ -188,42 +147,22 @@ const user = {
     res.status(200).render("favMovies", { arrayVacio });
   },
   deleteFavMovies: async (req, res) =>{
-    console.log('deleteFavMovies *****: ',req.user)
     let idMovie =  req.params.idMovie
-
-  
     let email = req.user;
-
     let data = await sql.delFavMovies(idMovie,email)
-
-     
-
     res.status(200).render("message", {
       type: "Info: ",
       message: `Borrado con éxito`,
       link: `/favMovies/`,
       flag: true,
     });
-
-
-     
-
-
-
-
   },
 
   addFavUserMovies: async (req, res) => {
-    console.log('addFavUserMovies *****: ',req.user)
     try {
       let { movieId, Title } = req.params;
-
       let email = req.user;
-
       let data = await sql.checkFavMovies(movieId, email);
-
-      console.log("Valor data ", data);
-
       if (data[0].contador > 0) {
         res.status(200).render("message", {
           type: "Error: ",
@@ -233,7 +172,6 @@ const user = {
         });
       } else {
         let data2 = await sql.addFavMovie(movieId, email);
-
         res.status(200).render("message", {
           type: "Info: ",
           message: `Se agregó a mis películas`,

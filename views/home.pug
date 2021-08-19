@@ -5,59 +5,52 @@ html(lang='en')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(href='https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Raleway:wght@400;800&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='../Public/css/general.css')
     link(rel='stylesheet' href='../Public/css/home.css')
-    link(rel='stylesheet' href='../Public/css/style.css')
     link(rel='preconnect' href='https://fonts.gstatic.com')
     link(href='https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Raleway:wght@400;800&display=swap' rel='stylesheet')
     link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='https://img.icons8.com/doodle/48/000000/popcorn.png')
     script(src='../Public/js/user.js' defer)    
     script(src='../Public/js/changeLogin.js' defer)
     title Home 
-  body.divHome
-    h1 MOVIEAPP
-    #divLogin
-      form#formLogin(action="/" method="POST")
-        input(type='email' placeholder="Introduce Email" name='loginEmail' required)
-        input(type='password' placeholder="Introduce Password" name='loginPasswordUser' required)
-        br
-        button.boton1(type='submit' name='SubmitLogUser' ) Aceptar
-        br
-        br 
-      a(href='/auth/google') 
-        img#googleAuth(src="../Public/img/googleAuth.png")
-        br   
-      p#goToRegister  No eres usuario?
-      
-    #divSignUp
-      p#goToLogin  Login?
-      #TituloH1
-        h1 SingUp
+  body
+    .homeContainer
+      .appTitle
+        h1 MOVIEAPP
+      .optionAcss
+        .access
+          p#goToLogin Logarse
+        .register
+          p#goToRegister Registarse
+      #login
+        .loginForm
+          form#formLogin(action="/" method="POST")
+            input(type='email' placeholder="Introduce Email" name='loginEmail' required)
+            input(type='password' placeholder="Introduce Password" name='loginPasswordUser' required)
+            button.boton1(type='submit' name='SubmitLogUser' ) Aceptar
+        .googleLogin
+          .googleBttn
+            a(href='/auth/google') 
+              img#googleAuth(src="../Public/img/googleAuth.png")
+      #signUp
+        .signUpForm
+          form#formSingUp(action="/singUp" method="POST")
+            input#name(type='text' placeholder='Introduce tu nombre' name='singUpUser' required)
+            input#email(type='email' placeholder='Introduce tu email' name='singUpEmail' required)
+            input#password(type='password' placeholder='Introduce tu contraseña' name='singUpPass' required)
+            input#repassword(type='password' placeholder='Repite tu contraseña' name='singUpRePass' required)
+            button#singUpButton.boton1(type='submit' name="singUpButton") Aceptar
       #errorMsg
-       
-      form#formSingUp(action="/singUp" method="POST")
-        input#name(type='text' placeholder='Introduce tu nombre' name='singUpUser' required)
-        br
-        input#email(type='email' placeholder='Introduce tu email' name='singUpEmail' required)
-        br
-        input#password(type='password' placeholder='Introduce tu contraseña' name='singUpPass' required)
-        br
-        input#repassword(type='password' placeholder='Repite tu contraseña' name='singUpRePass' required)
-        br
-        button#singUpButton.boton1(type='submit' name="singUpButton") Aceptar
-        br
-      
-
-
-    if flag == true
-        .box
-            .box-cont
-                span Mensaje:
-                p#resultado #{message}
-                br
-                a#oka(href=link) Aceptar
-    else 
-        .boxNone
-            .box-cont
-                p#resultado #{message}
-                br
-                a#oka(href=link) Aceptar
+      if flag == true
+          .box
+              .box-cont
+                  span Mensaje:
+                  p#resultado #{message}
+                  br
+                  a#oka(href=link) Aceptar
+      else 
+          .boxNone
+              .box-cont
+                  p#resultado #{message}
+                  br
+                  a#oka(href=link) Aceptar

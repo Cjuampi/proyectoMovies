@@ -1,79 +1,43 @@
-body {
-  margin: 0px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-image: url("../img/bg_amarillo.jpg");
-  background-repeat: no-repeat;
-  
-}
-h1{
-    margin-top: 20%;
-    color: white;
-}
-.botonFav {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  background-color: #f2e812;
-  font-size: 16px;
-  border: solid;
-  border-radius: 20px;
-  text-align: center;
-  padding: 5px 35px 5px 35px;
-  margin: 15px 0px 5px 0px;
-}
-.botonLogOut {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  background-color: rgb(117, 116, 116);
-  color: white;
-  font-size: 16px;
-  border: solid;
-  border-radius: 20px;
-  text-align: center;
-  padding: 5px 40px 5px 40px;
-  margin: 45px 0px 15px 0px;
-}
-.botonEdit {
-  font-family: "Raleway", sans-serif;
-  color: white;
-  font-weight: 800;
-  background-color: #4e6ba7;
-  font-size: 16px;
-  border: solid;
-  border-width: 1px;
-  border-radius: 20px;
-  text-align: center;
-  padding: 5px 46px 5px 46px;
-  margin: 15px 0px 5px 0px;
-}
-.botonDelete {
-  font-family: "Raleway", sans-serif;
-  color: white;
-  font-weight: 800;
-  background-color: #eb7e7b;
-  font-size: 16px;
-  border: solid;
-  border-width: 1px;
-  border-radius: 20px;
-  text-align: center;
-  padding: 5px 38px 5px 38px;
-  margin: 15px 0px 5px 0px;
-}
-.botonSearch {
-  font-family: "Raleway", sans-serif;
-  color: black;
-  font-weight: 800;
-  background-color: #db2e1d;
-  font-size: 16px;
-  border: solid;
-  border-width: 1px;
-  border-radius: 20px;
-  text-align: center;
-  padding: 5px 46px 5px 46px;
-  margin: 15px 0px 5px 0px;
-}
 
-#containerButtons {
+.containerButtons{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10%;
+  height: 60vh;
+ 
+}
+
+.listButtonsDash{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  width: 100vw;
+  height: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.boton1{
+  background-color: #6096ba; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  height: 37px;
+  width: 188px;
+  border-radius: 2px;
+}
+
+.titleDashboard{
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .listButtonsDash {
+    margin-top: 5%;
+  }
 }

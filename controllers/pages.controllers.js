@@ -43,15 +43,12 @@ const pages = {
                     let updateToken = updateResult()
                     try{
                       if(updateToken == undefined){
-                        console.log('undefined: ' ,updateToken)
                         res.status(403).render('message',{ type: "Error: ", message: "No se registra la autenticacion, intentolo más tarde", link: '/', flag: true })
                       }else{
                         if(updateToken.hasOwnProperty('numError') ){
-                          console.log('numError: ' ,updateToken)
                           res.status(500).render('message',{ type: "Error: ", message: "No se puede escribir la autenticacion, intentelo más tarde", link: '/', flag: true }) 
                         }else{
                           data.admin==0?res.cookie('token',newToken).redirect('/dashboard'):res.cookie('token',newToken).redirect('/admin')
-                          /* data.admin==0?res.cookie('token',newToken).status(200).render('dashboard'):res.cookie('token',newToken).status(200).render('admin') */
                         }
                       }
                     }catch(err){
@@ -120,7 +117,6 @@ const pages = {
     if (result[0].num == 0 ){
       let data = await mySqlM.createUser(dataUser)
       if (data.affectedRows==1){
-        /* res.cookie('token',user.token).status(200).render('dashboard') */
           res.cookie('token',user.token).redirect('/dashboard')
       }else{
         res.status(403).render('message',{ type: "Error: ", message: "No se puede registrar al usuario, inténtelo más tarde", link: '/', flag: true }) 

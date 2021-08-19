@@ -8,7 +8,6 @@ const userMySQL = {
             conn = await pool.getConnection();
             let sqlQuery = ("INSERT INTO users value (?,?,?,?,?)")
             result = await conn.query(sqlQuery,data);
-            /* console.log('result',result); */
         } catch (err) {
             result = {codeError: err.code, numError: err.errno}
             console.log(err)
@@ -25,10 +24,8 @@ const userMySQL = {
             let sqlQuery = ("select email from users where email=?")
             result = await conn.query(sqlQuery,email);
             result = result[0]
-            /* console.log('resultUserExiste',result); */
         } catch (err) {
             result = {codeError: err.code, numError: err.errno}
-            /* console.log(result) */
         } finally {
             if (conn) conn.end();
         }
@@ -42,10 +39,8 @@ const userMySQL = {
             let sqlQuery = ("select * from users where email=?")
             result = await conn.query(sqlQuery,email);
             result = result[0]
-            /* console.log('resultUserExiste',result); */
         } catch (err) {
             result = {codeError: err.code, numError: err.errno}
-            /* console.log(result) */
         } finally {
             if (conn) conn.end();
         }
@@ -58,11 +53,9 @@ const userMySQL = {
             conn = await pool.getConnection();
             let sqlQuery = ("update users set token=? where email=?")
             result = await conn.query(sqlQuery,[token,email]);
-            /* console.log(result) */
         } catch (err) {
             console.log(err)
             result = {codeError: err.code, numError: err.errno}
-            /* console.log(result)  */
         } finally {
             if (conn) conn.end();
         }

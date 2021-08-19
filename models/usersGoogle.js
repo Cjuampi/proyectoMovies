@@ -7,7 +7,6 @@ const muserGoogle = {
           conn = await pool.getConnection();
           let sql_query = "select count(*) as num from users where email = ?"
           result = await conn.query(sql_query,user);
-          /* console.log(result);  */
         } catch (err) {
           throw err;
         } finally {
@@ -37,11 +36,8 @@ const muserGoogle = {
             conn = await pool.getConnection();
             let sqlQuery = ("update users set token=? where email=?")
             result = await conn.query(sqlQuery,[token,email]);
-            /* console.log(result) */
         } catch (err) {
-            /* console.log(err) */
             result = {codeError: err.code, numError: err.errno}
-            /* console.log(result)  */
         } finally {
             if (conn) conn.end();
         }

@@ -4,33 +4,21 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='../Public/css/menu.css', type='text/css' )
-    link(rel='stylesheet', href='../Public/css/dashboard.css', type='text/css' )
+    link(rel='stylesheet' href='../Public/css/general.css')
+    link(rel='stylesheet' href='../Public/css/dashboard.css')
     link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='https://img.icons8.com/doodle/48/000000/popcorn.png')
     title Dashboard
-    body
-    #circuleRigth
-    #imgMenu
-      img#menuIcon.blockMenu(src='../Public/img/menu.png')
-      img#menuIcon2.noneMenu(src='../Public/img/menu.png')
-    #containerMenu
-      ul#menuBurger.slide-bottom
-        li  
-          a(href='/dashboard') Panel de usuario
-        li 
-          a(href='/favMovies') Mis peliculas
-        li 
-          a(href='/search') Buscar peliculas
-        li 
-          a(href='/logout') Cerrar Sesión  
-    #containerButtons 
-      h1 PANEL USUARIO
-      a(href='/search')
-        button.botonSearch(type='submit') Buscar
-      br
-      a(href='/favMovies')
-        button.botonFav(type='submit') Favoritos
-      br
-      a(href='/logout')
-        button.botonLogOut(type='submit') Salir
-      script(src='../Public/js/menu.js')
+    body      
+      .containerButtons 
+        .titleDashboard
+          h1 PANEL DE USUARIO
+        .listButtonsDash
+          .buttonBuscar
+            a(href='/search')
+              button.boton1(type='submit') Buscar
+          .buttonFav
+            a(href='/favMovies')
+              button.boton1(type='submit') Favoritos
+          .buttonSalir
+            a(href='/logout')
+              button.boton1(type='submit') Salir

@@ -1,4 +1,76 @@
-body {
+
+.appTitle, .access, .register {
+  color: #95c6ef;
+}
+
+#signUp{
+  display: none;
+}
+#goToRegister, #goToLogin {
+  cursor: pointer;
+}
+#login, #signUp{
+  text-align: center;
+  height: 200px;
+}
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#formLogin, #formSingUp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.optionAcss{
+  display: flex;
+  justify-content: space-around;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+input{
+  color: white;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 1px solid #95c6ef;
+  margin-bottom: 13px;
+} 
+.boton1{
+  background-color: #6096ba; 
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  height: 37px;
+  width: 188px;
+  border-radius: 2px;
+}
+.googleLogin{
+  margin-top: 15%;
+}
+
+::placeholder { color: #8b8c89;
+}
+
+/* .access{
+  color:#f3f5f7;
+  height: 50;
+  background-color: #95c6ef;
+} */
+
+
+/* body {
     background-color: black;
     background-image: url("../img/foto_bg.jpg");
     background-position: top;
@@ -85,4 +157,4 @@ body {
   }
   input:focus::placeholder {
     color: transparent;
-  }
+  } */

@@ -5,56 +5,46 @@
   right: 50%;
   bottom: 20px;
   width: 100%;
-  
   padding: 9px 6px;
   border-radius: 50%;
   opacity: 1 !important;
   z-index: 40;
-  
   pointer-events: auto;
   transform: translateX(50%);
   transition: opacity .3s;
-  
-
 }
 
 #imgBurger{
    width: 100%;
 }
 
-
 #menuBurger {
- 
   margin-top: 0%;
   padding-top: 20%;
   padding-bottom: 100%;
-
-  
-  
   width: 100%;
   font-style: bolder;
   height: 100%;
   font-size: 1.3rem;
   text-decoration: none;
- 
-  background-color: black;
+  background-color: #274c77;
   color: white;
- 
   flex-direction: column;
- 
   position: fixed;
 }
+
 li {
   padding: 5%;
 }
+
 #containerMenu {
-    position: absolute;
+  position: absolute;
   display: none;
   background-color: black;
-  height: 100%;
-   
+  height: 100%;   
   z-index: 20;
 }
+
 header {
   margin-top: 0%;
   width: 100%;
@@ -66,13 +56,12 @@ header {
 #menuIcon2 {
   width: 15%;
   border: solid 3px white;
-  margin-top: 0%;
-  
+  margin-top: 0%;  
 }
 
 .blockMenu {
   display: block;
-  background-color: black;
+  background-color: #274c77;
   border-radius: 50%;
 }
 
@@ -82,18 +71,16 @@ header {
 }
 
 a{
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 li {
   text-decoration: none;
   list-style: none;
 }
-.slide-bottom{animation:slide-bottom .9s cubic-bezier(.25,.46,.45,.94) both}
 
- 
+.slide-bottom{animation:slide-bottom .9s cubic-bezier(.25,.46,.45,.94) both}
 
 @keyframes slide-bottom{0%{transform:translateY(-100px)}100%{transform:translateY(0px)}}
 
- 

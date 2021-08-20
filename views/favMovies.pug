@@ -4,47 +4,36 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='../Public/css/menu.css', type='text/css' )
+    link(rel='stylesheet', href='../Public/css/general.css', type='text/css' )
     link(rel='stylesheet', href='../Public/css/favMovies.css', type='text/css' )
     link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='https://img.icons8.com/doodle/48/000000/popcorn.png')
     script(src='../Public/js/menu.js' defer)
     title Mis películas
-    body
-    #circuleRigth
-    #imgMenu
-      img#menuIcon.blockMenu(src='../Public/img/menu.png')
-      img#menuIcon2.noneMenu(src='../Public/img/menu.png')
-    #containerMenu
-      ul#menuBurger.slide-bottom
-        li  
-          a(href='/dashboard') Panel de usuario
-        li 
-          a(href='/favMovies') Mis peliculas
-        li 
-          a(href='/search') Buscar peliculas
-        li 
-          a(href='/logout') Cerrar Sesión  
-    h1 MIS PELÍCULAS
-    P
-    
-    #filmContainer
-          if arrayVacio              
-            for result in arrayVacio
-              #favMovies
-                #divPoster
-                 img#Poster(src=result.Poster) 
-                #containerText 
-                  a(href=`../search/${result.Title}`) 
-                    h1 #{result.Title}
-                  a(href=`../deleteFilm/${result.imdbID}`)  
-                    img#favStar(src="../Public/img/unfav.png") 
-                  p Año: #{ result.Year}
-                  p Director: #{result.Director}
-                  p Actores : '#{result.Actors}'   
-                  p Duración: '#{result.Runtime} 
-                  p Género: '#{result.Genre} 
-                  p Idiomas : '#{result.Language}' 
-                  p Valoración : '#{result.imdbRating}'                  
-
-                
-              
+  body
+    .containerFavA
+      .containerFavP 
+        .titleFavP
+          h1 MIS PELÍCULAS
+        .menuP 
+          include ./menu.pug    
+      .filmContainer
+            if arrayVacio              
+              for result in arrayVacio
+                .favMovies
+                  .divPoster
+                    img.Poster(src=result.Poster) 
+                  .containerText
+                    .resulTitle
+                      a(href=`../search/${result.Title}`) 
+                        h2 #{result.Title}
+                    .resultStar
+                      a(href=`../deleteFilm/${result.imdbID}`)  
+                        img.favStar(src="../Public/img/unfav.png") 
+                    .resultText
+                      p Año: #{ result.Year}
+                      p Director: #{result.Director}
+                      p Actores : '#{result.Actors}'   
+                      p Duración: '#{result.Runtime} 
+                      p Género: '#{result.Genre} 
+                      p Idiomas : '#{result.Language}' 
+                      p Valoración : '#{result.imdbRating}'

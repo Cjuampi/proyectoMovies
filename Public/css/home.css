@@ -1,24 +1,26 @@
 
 .appTitle, .access, .register {
-  color: #95c6ef;
+  color: #020e3c;
 }
 
 #signUp{
   display: none;
 }
+
 #goToRegister, #goToLogin {
   cursor: pointer;
 }
+
 #login, #signUp{
   text-align: center;
   height: 200px;
 }
 .homeContainer {
+  padding-top: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 #formLogin, #formSingUp{
@@ -40,11 +42,12 @@ input{
   border: none;
   text-align: center;
   font-size: 16px;
-  border-bottom: 1px solid #95c6ef;
+  border-bottom: 1px solid #020e3c;
   margin-bottom: 13px;
 } 
+
 .boton1{
-  background-color: #6096ba; 
+  background-color: #020e3c; 
   border: none;
   color: white;
   text-align: center;
@@ -63,98 +66,63 @@ input{
 ::placeholder { color: #8b8c89;
 }
 
-/* .access{
-  color:#f3f5f7;
-  height: 50;
-  background-color: #95c6ef;
-} */
-
-
-/* body {
-    background-color: black;
-    background-image: url("../img/foto_bg.jpg");
-    background-position: top;
+@media screen and (min-width: 280px) {
+  body{
+    height: 100vh;
+    background-image: url(../img/maskironman.png);
+    background-position: center center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    margin-top: 85px;
-  }
-  h1{
-      font-family: 'Raleway', sans-serif;
-      font-weight: 800;
-      color: white;
-      text-align: center;
-      margin: 45px;
-  }
-  h2{
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    margin: 5px;
+   /*  background-size: cover; */
+    backdrop-filter: blur(5px); 
   }
   input{
-    font-family: 'Dosis', sans-serif;
-    color: white;
-    background-color: transparent;
-    font-size: 16px;
-    border: none;
-    border-bottom: 1px solid #FFEC4D;
-    text-align: center;
-    padding: 5px 18px 5px 18px;
-    margin: 5px;
+    color:#020e3c;
+    border-bottom: 1px solid #020e3c;
   }
-  ::placeholder { color: white;
+
+}
+
+@media screen and (min-width: 768px) {
+  body{
+    
+    background-image: url(../img/pngwing.com.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    backdrop-filter: blur(13px); 
   }
-  .rrss{
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    background-color: #EB7E7B;
-    border: solid;
-    border-width: 1px;
-    border-radius: 20px;
-    padding: 5px 85px 5px 85px;
-    margin-top: 55px;
+  .homeContainer {
+    padding-top: 15%;
+  }
+
+  .appTitle, .access, .register {
+    color: #020e3c;
+  }
+
+  input{
+    color:#020e3c;
+    border-bottom: 1px solid #020e3c;
   }
   .boton1{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    background-color: #F2E812;
-    font-size: 16px;
-    border: solid;
-    border-radius: 20px;
-    text-align: center;
-    padding: 5px 46px 5px 46px;
-    margin: 15px 0px 5px 0px;
-  }
-  #googleAuth{
-    margin-top: 10%;
-    width: 50%;
-    padding-left: 26%
+    background-color: #020e3c; 
   }
 
-  #divLogin{
+}
 
 
-    display: block;
+ @media screen and (min-height: 1024px) {
+  body{
+    height: 100vh;
+    background-image: url(../img/pngwing.com.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    backdrop-filter: blur(5px); 
   }
-
-  #divSignUp{
-    display: none;
+  .homeContainer {
+    padding-top: 50%;
   }
-  .logButtons {
-    margin: 2%;
-    height: 30px;
-    border-radius: 4px;
-    border: solid 2 px bla;
-    background-color: #8CD139;
-    
-    color: white;
-    font-weight: bold;
-  }
-  input:focus::placeholder {
-    color: transparent;
-  } */
+}  

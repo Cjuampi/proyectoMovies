@@ -9,13 +9,15 @@ html(lang='en')
     link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='https://img.icons8.com/doodle/48/000000/popcorn.png')
     title Buscar
     body
+      .menuP 
+        include ./menu.pug
+        .formSrch
+          form(action='/search' method='post')
+            input#filmName(type='text' placeholder='Buscar Película' required name='peliculaBuscar') 
       .containerSearch
         .containerHe
-          .formSrch
-            form(action='/search' method='post')
-                input#filmName(type='text' placeholder='Buscar Película' required name='peliculaBuscar') 
-          .menuHe 
-            include ./menu.pug
+          
+
         .containerFormResul
           .containerResult
             #filmContainer

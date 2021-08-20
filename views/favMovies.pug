@@ -10,12 +10,14 @@ html(lang='en')
     script(src='../Public/js/menu.js' defer)
     title Mis películas
   body
+    .menuP 
+      include ./menu.pug 
     .containerFavA
-      .containerFavP 
+
+      .containerFavP
+    
         .titleFavP
           h1 MIS PELÍCULAS
-        .menuP 
-          include ./menu.pug    
       .filmContainer
             if arrayVacio              
               for result in arrayVacio

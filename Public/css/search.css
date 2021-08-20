@@ -118,9 +118,10 @@ input:focus::placeholder {
       width: 50vw;
     }
     .formSrch{
-        width: 90vw;
+        width: 70vw;
         margin-left: 200px;
         background-color: #48639c;
+        position: relative;
         /* border-bottom: 1px solid white; */
     }
      .menuHe{
@@ -133,6 +134,20 @@ input:focus::placeholder {
         position: fixed;
         z-index: 10;       
     } 
+    .menuP{
+        position: relative;
+          background-color: #274c77;
+          height: 55px;
+          width: 20px;
+          padding-top: 0px;
+          top: 0px;
+          margin-right: 0px;
+          padding-right: 0px;
+          /* border-bottom: 1px solid white; */
+          
+    
+      }
+    
     #filmContainer{
       display: flex;
       flex-wrap: wrap;
@@ -154,8 +169,8 @@ input:focus::placeholder {
       width: 100%;
     }
     #filmName{
-      height: 70px;
-      width: 100%;
+      height: 50px;
+      width: 70vw;
       padding-right: 0;
       padding-top: 0;
       padding-bottom: 0;

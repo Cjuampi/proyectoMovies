@@ -4,46 +4,37 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='../Public/css/menu.css', type='text/css' )
+    link(rel='stylesheet', href='../Public/css/general.css', type='text/css' )
     link(rel='stylesheet', href='../Public/css/searchAllDetails.css', type='text/css' )
     link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='https://img.icons8.com/doodle/48/000000/popcorn.png')
     script(src='../Public/js/menu.js' defer)    
     title Detalle película
-    body 
-    #imgMenu
-      img#menuIcon.blockMenu(src='../Public/img/menu.png')
-      img#menuIcon2.noneMenu(src='../Public/img/menu.png')
-    #containerMenu
-      ul#menuBurger.slide-bottom
-        li  
-          a(href='/dashboard') Panel de usuario
-        li 
-          a(href='/favMovies') Mis peliculas
-        li 
-          a(href='/search') Buscar peliculas
-        li 
-          a(href='/logout') Cerrar Sesión      
-    h1 FICHA COMPLETA
-    #filmContainer           
-              #favMovies
-                #divPoster
-                 img#Poster(src=data2.Poster) 
-                #containerText 
-                  a(href=`../search/${data2.Title}`) 
-                    h1 #{data2.Title}
-                  a(href=`/favMovies/${data2.imdbID}/${data2.Title}`)  
-                    img#favStar(src="../Public/img/fav.png") 
-                  p Año: #{ data2.Year}
-                  p Director: #{data2.Director}
-                  p Actores : '#{data2.Actors}'   
-                  p Duración: '#{data2.Runtime} 
-                  p Género: '#{data2.Genre} 
-                  p Idiomas : '#{data2.Language}' 
-                  p Valoración : '#{data2.imdbRating}'
-              #divOpinions        
-                    ul#Op 
-                      li 
-                            h2 Opiniones: 
-                    for opinions in opiniones                  
-                          li
-                            h5 #{opinions}            
+  body
+    .menuP 
+      include ./menu.pug
+    .mainContainer
+      .containerDetails
+        .titleDetailP      
+          h1 Detalles
+        .filmContainer           
+          .favMovies
+            .divPoster
+              img.Poster(src=data2.Poster) 
+            .containerText 
+              a(href=`../search/${data2.Title}`) 
+                h1 #{data2.Title}
+              a(href=`/favMovies/${data2.imdbID}/${data2.Title}`)  
+                img.favStar(src="../Public/img/fav.png") 
+              p Año: #{ data2.Year}
+              p Director: #{data2.Director}
+              p Actores : '#{data2.Actors}'   
+              p Duración: '#{data2.Runtime} 
+              p Género: '#{data2.Genre} 
+              p Idiomas : '#{data2.Language}' 
+              p Valoración : '#{data2.imdbRating}'
+          .divOpinions
+            h2 Opiniones:        
+            ul.Op  
+            for opinions in opiniones                  
+                  li
+                    h5 #{opinions}            

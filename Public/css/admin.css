@@ -1,4 +1,78 @@
-body{
+
+.titleAdmin{
+  text-align: center;
+  color: white;
+}
+.mainContainer{
+  width:100%;
+}
+.containerAdmin{
+  display: flex;
+  flex-direction: column;
+}
+.containerText{
+  color:white;
+  margin-bottom: 5%;
+}
+
+.addDel>a>img{
+  width: 50px;
+  height: 50px;
+}
+
+
+
+@media screen and (min-width: 280px) {
+  .Poster{
+    width: 100%;
+    height: 100%;
+  }
+  .favMovies{
+    margin-bottom: 30%;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .divPoster{
+    width: 30%;
+  }
+
+  .mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .containerAdmin{
+    width: 50%;
+  }
+
+  .favMovies{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6096ba;
+    margin-bottom:5%;
+  }
+
+  .menuP{
+    position: relative;
+      background-color: #274c77;
+      height: 55px;
+      width: 20px;
+      padding-top: 0px;
+      top: 0px;
+      margin-right: 0px;
+      padding-right: 0px;
+      /* border-bottom: 1px solid white; */
+  }
+  .containerText > p{
+    margin:0px;
+  }
+
+}
+/* body{
     margin: 0px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: black;
@@ -7,9 +81,7 @@ body{
    
    
   #filmContainer{
-   
     width: 100%;
-  /*   background-color: red; */
   -webkit-box-shadow: 1px -1px 50px -15px #fff; 
   box-shadow: 1px -1px 50px -15px #fff;
    
@@ -27,8 +99,6 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-   /*  background-color: red; */
-   /*  border: 3px solid black; */
     
   }
   
@@ -42,7 +112,6 @@ body{
     font-size: 0.7rem;
     padding-left: 2%;
     padding-bottom: 2%;
-  /*   background-color: green; */
   }
   
   #Poster{
@@ -63,4 +132,4 @@ body{
   
     width: 20%;
        
-   }
+   } */

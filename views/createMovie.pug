@@ -4,11 +4,12 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='../Public/css/general.css', type='text/css' )
     link(rel='stylesheet', href='../Public/css/createMovie.css', type='text/css' )
     link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='https://img.icons8.com/doodle/48/000000/popcorn.png')
     title Crear película
   body
-    h2 CREAR PELÍCULA
+    h2 Crear película
   #divContainer
     form#formCreateMovie(action="/createMovie" method="POST")
       label Titulo

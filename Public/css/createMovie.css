@@ -1,11 +1,3 @@
-body{
-
-    margin: 0px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: black;
-    color: white;
-
-}
 
 #divContainer{
 
@@ -18,21 +10,24 @@ body{
 label{
     display: flex;
     font-size: 1.2rem;
+    color: white;
 }
 
 
 button{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    background-color: #F2E812;
+    background-color: #020e3c; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
-    margin-left: 30%;
-    border: solid;
-    border-radius: 20px;
-    width: 40%;
-    
-    margin: 15px 0px 5px 0px;
+    cursor: pointer;
+    height: 37px;
+    width: 70px;
+    border-radius: 2px;
   }
+  
 
   h2{
     margin-top: 5%;

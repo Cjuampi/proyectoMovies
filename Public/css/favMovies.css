@@ -36,6 +36,10 @@ h2{
   margin-top: 10%;
 }
 
+.titleFavP{
+  text-align: center;
+  color:white;
+}
 
 @media screen and (min-width: 280px) {
   .Poster{
@@ -82,6 +86,9 @@ h2{
     align-items: center;
   }
 
+  .filmContainer{
+    margin-top: 5%;
+  }
 
 }
 

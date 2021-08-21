@@ -24,5 +24,5 @@ app.use(passport.session());
 app.use("/", router);
 
 app.listen(PORT, ()=>{
-    console.log(`EJEMPLO http://localhost:${PORT}`);
+    console.log(`Server: http://localhost:${PORT}`);
 })

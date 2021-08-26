@@ -8,7 +8,7 @@ Es un proyecto/ejercicio propuesto por [@TheBridge-FullStackDeveloper](https://g
 
 Repositorio original [ hug0alons0/proyectoMovies](https://github.com/hug0alons0/proyectoMovies.git)
 
-### Desarrollado con 
+### Desarrollado con:
 - Nodejs
 - Express
 - Mongo

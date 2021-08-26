@@ -4,7 +4,9 @@
 </div>
 
 ### Movie App
-Es un proyecto realizado en grupo por [@hug0alons0](https://github.com/hug0alons0), [@ignaciosein](https://github.com/ignaciosein) y [@Cjuampi](https://github.com/Cjuampi)
+Es un proyecto/ejercicio propuesto por [@TheBridge-FullStackDeveloper](https://github.com/TheBridge-FullStackDeveloper) y realizado por [@hug0alons0](https://github.com/hug0alons0), [@ignaciosein](https://github.com/ignaciosein) y [@Cjuampi](https://github.com/Cjuampi).
+
+Repositorio original [ hug0alons0/proyectoMovies](https://github.com/hug0alons0/proyectoMovies.git)
 
 ### Requisitos del proyecto
 

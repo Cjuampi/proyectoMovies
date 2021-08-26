@@ -8,6 +8,15 @@ Es un proyecto/ejercicio propuesto por [@TheBridge-FullStackDeveloper](https://g
 
 Repositorio original [ hug0alons0/proyectoMovies](https://github.com/hug0alons0/proyectoMovies.git)
 
+### Desarrollado con 
+- Nodejs
+- Express
+- Mongo
+- MySQL
+- Pug
+- Puppeteer
+- Heroku
+
 ### Requisitos del proyecto
 
 Se pide desarrollar una aplicación web de búsqueda y gestión de películas que contemple las siguientes funcionalidades y endpoints asociados. Trabajaremos sobre los conceptos vistos de Frontend y Backend en clase

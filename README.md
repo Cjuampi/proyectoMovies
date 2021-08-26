@@ -15,6 +15,7 @@ Repositorio original [ hug0alons0/proyectoMovies](https://github.com/hug0alons0/
 - MySQL
 - Pug
 - Puppeteer
+- Passportjs
 - Heroku
 
 ### Requisitos del proyecto
